@@ -18,12 +18,12 @@ jobs:
         runs-on: ubuntu-latest
         # Steps represent a sequence of tasks that will be executed as part of the job
         steps:
-            - name: Cancel Previous Runs
+          - name: Cancel Previous Runs
             uses: styfle/cancel-workflow-action@0.9.0
             with:
                 access_token: ${{ github.token }}
             # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-        - uses: actions/checkout@v2
-        # Runs a single command using the runners shell
-        - name: Run unit tests
+          - uses: actions/checkout@v2
+          # Runs a single command using the runners shell
+          - name: Run unit tests
             run: bash ./scripts/runTests.sh
